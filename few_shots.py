@@ -35,6 +35,10 @@ def get_filtered_posts(df, length, language, tag):
     ]
     return df_filtered.to_dict(orient='records')
 
+def get_tags():
+    _, unique_tags = load_posts()  # Load posts and extract unique tags
+    return unique_tags
+
 
 if __name__ == "__main__":
     df_posts, unique_tags = load_posts()
